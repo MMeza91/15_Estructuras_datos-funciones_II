@@ -8,8 +8,9 @@ precios = {'Notebook': 700000,
 'Tarjeta de Video': 1500000}
 
 
+def filtrar(numero,orden='mayor',**lista):
 
-def filtrar(lista:dict[str,int],numero:int,orden:str='mayor'):
+#def filtrar(lista:dict[str,int],numero:int,orden:str='mayor'):
     resultado=[]
     if orden == 'mayor':
         for item , precio in lista.items():
