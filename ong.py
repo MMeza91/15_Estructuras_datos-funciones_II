@@ -19,25 +19,26 @@ def productoria(valores:list[int]) -> int:
     
     return producto
 
-def calcular(variables:str):
+def calcular(**kwargs):
     """
     Se entregan valores con instrucciones y retorna impresión en pantalla con los resultados
     """
-    variables_divididas = []
-    variables_divididas = variables.split(',')
-
-    print(variables_divididas)
-
-    a_1 = []
-    for i in variables_divididas:
-        a_1.append(i.split(' = '))
-
-    print(a_1)
+    print("\nCalculemos la productoria y el factorial de los valores ingresados\n")
+    for x,y in kwargs.items():
 
 
+        if "fact" in x.lower():
+            resultado = factorial(y)
+            print(f"El factorial de {y} es {resultado}")
+        elif "prod" in x.lower():
+            resultado = productoria(y)
+            print(f"La productoria de {y} es {resultado}")
+    print()
+
+    
 
 
 
 
 
-calcular('fact_1 = 5, prod_1 = [3,6,4,2,8], fact_2 = 6')
+calcular(fact_1 = 5, prod_1 = [3,6,4,2,8], fact_2 = 6)
